@@ -1,0 +1,237 @@
+.rsolution-card-tabs {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    //margin-top: 30px;
+    //height: calc(100% - 30px);
+    height: 100%;
+    //
+    .rsolution-card-body {
+        border-radius: 0px 5px 5px 5px;
+        background: #ffffff;
+        z-index: 1;
+        box-shadow: $shadow;
+        flex: 1 1 auto;
+        min-height: 1px;
+        padding: 25px;
+    }
+    .nav-tabs {
+        border-bottom: 0px;
+        .nav-item {
+            position: relative;
+            text-transform: uppercase;
+            //
+            box-shadow: 3px 0px 10px rgba($shadowColor, $shadowOpacity);
+            margin-bottom: 0px;
+            &:first-child {
+                border-top-left-radius: 5px;
+                .nav-link {
+                    border-top-left-radius: 5px !important;
+                }
+            }
+            &:last-child {
+                border-top-right-radius: 5px;
+                .nav-link {
+                    border-top-right-radius: 5px !important;
+                }
+            }
+            &.active {
+                z-index: 1;
+                &:not(:first-child),
+                &:not(:last-child) {
+                    box-shadow: 0px 0px 10px rgba($shadowColor, $shadowOpacity);
+                }
+
+                &:last-child {
+                    box-shadow: -3px 0px 10px rgba($shadowColor, $shadowOpacity);
+                }
+            }
+
+            .nav-link {
+                //
+                padding: 15px 35px;
+                border-bottom: 0px !important;
+                border: 0px;
+                font-weight: $fontWeightBold;
+                text-align: center;
+                background: $bgTable;
+                color: $textSecondary;
+                border-radius: 0px !important;
+                &.active {
+                    background: #ffffff;
+                    z-index: 1;
+                    position: relative;
+                    color: $text;
+                }
+                &.active::after {
+                    width: 60%;
+                    height: 2px;
+                    content: "";
+                    background: $mainPrimary;
+                    left: 20%;
+                    position: absolute;
+                    z-index: 1;
+                    bottom: 0px;
+                }
+            }
+        }
+    }
+    //Mini
+    &.mini {
+        background: #ffffff;
+        box-shadow: $shadow;
+        margin-top: 30px !important;
+        height: calc(100% - 30px);
+        padding: 10px 25px;
+        border-radius: 5px;
+        .rsolution-card-body {
+            box-shadow: none !important;
+            padding: 15px 0px;
+        }
+        .nav-tabs {
+            .nav-link {
+                background: unset !important;
+                padding: 15px 15px;
+                &.active::after {
+                    width: 100%;
+                    left: 0;
+                }
+            }
+            .nav-item {
+                box-shadow: none !important;
+            }
+        }
+    }
+}
+
+.rsolution-tabs {
+    border-bottom: 0px;
+    color: $textSecondary;
+    .nav-item {
+        position: relative;
+        .nav-link {
+            padding: 15px;
+            border: 1px solid $border;
+            min-width: 200px;
+            background: $bgTable;
+            border-radius: 0px;
+            .title {
+                font-weight: $fontWeightBold;
+                text-transform: uppercase;
+            }
+            .sub-title {
+                font-weight: $fontWeightNormal;
+                text-transform: lowercase;
+            }
+            &.active {
+                background: $bgWhite;
+                color: $mainPrimary;
+                border-color: $border;
+                border-bottom-color: $bgWhite;
+                .border-top {
+                    border-color: $mainPrimary !important;
+                }
+            }
+            &.active::before {
+                content: "";
+                width: 100%;
+                height: 5px;
+                position: absolute;
+                background: $mainPrimary;
+                left: 0px;
+                border-top-left-radius: 5px;
+                border-top-right-radius: 5px;
+                top: -4px;
+                border-right: 0px;
+            }
+            &.active::after {
+                width: 50%;
+                height: 1px;
+                content: "";
+                background: $border;
+                left: 25%;
+                position: absolute;
+                bottom: 0px;
+            }
+        }
+        &:not(:last-child) {
+            .nav-link {
+                border-right-width: 0px;
+            }
+        }
+        &:first-child .nav-link {
+            border-top-left-radius: 5px;
+        }
+        &:last-child .nav-link {
+            border-top-right-radius: 5px;
+        }
+    }
+
+    &.mini {
+    }
+}
+
+.rsolution-tabs-content {
+    border: 1px solid $border;
+    border-radius: 5px;
+    padding: 15px 25px;
+}
+
+.card-main-page {
+    width: 980px;
+}
+
+.tab-vertical {
+    width: 100%;
+    .tab-item {
+        width: 100%;
+        padding: 25px 15px;
+        border: 1px solid $tableRowBorder;
+        border-radius: 5px;
+        margin-top: 20px;
+        cursor: pointer;
+        position: relative;
+        &:first-child {
+            margin-top: 0px;
+        }
+        &:hover {
+            background: $colorPrimaryLight;
+            border-color: $border;
+        }
+        &.active {
+            color: #fff;
+            background: $mainPrimary;
+            border-color: $mainPrimary;
+        }
+        &::after {
+            position: absolute;
+            right: 15px;
+            top: 40%;
+            display: inline-block;
+            font-family: "Font Awesome 5 Free";
+            font-weight: 600;
+            content: "\f0da";
+        }
+    }
+}
+
+.fancy-tab {
+    .nav-bar {
+        border-bottom: 2px solid #ffffff;
+        a {
+            color: $textSecondary;
+            font-weight: $fontWeightMedium;
+            text-transform: uppercase;
+        }
+        .nav-bar-item {
+            padding: 0px;
+            &.active {
+                border-bottom: 2px solid $mainPrimary;
+                a {
+                    color: $mainPrimary;
+                }
+            }
+        }
+    }
+}

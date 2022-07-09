@@ -1,0 +1,78 @@
+/* Modal */
+.modal-mask {
+    position: fixed;
+    z-index: 9998;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: table;
+    transition: opacity 0.3s ease;
+
+    .modal-wrapper {
+        display: table-cell;
+        vertical-align: middle;
+    }
+
+    .modal-container {
+        width: 300px;
+        margin: 0px auto;
+        padding: 20px 30px;
+        background-color: #fff;
+        border-radius: 2px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.33);
+        transition: all 0.3s ease;
+        font-family: Helvetica, Arial, sans-serif;
+    }
+
+    .modal-header {
+        padding: 25px 0px;
+        margin: 0px 40px;
+        font-weight: $fontWeightBold !important;
+        border-color: $border;
+        h6 {
+            font-weight: $fontWeightBold !important;
+        }
+    }
+    .modal-body {
+        padding: 0px 40px;
+        margin: 25px 0px;
+    }
+    .modal-content {
+        min-width: 500px;
+        max-width: 500px;
+        &.modal-lg {
+            max-width: 800px;
+        }
+        &.modal-xl {
+            max-width: 1140px;
+        }
+    }
+    .modal-footer {
+        padding: 25px 0px;
+        margin: 0px 40px;
+        border-color: $border;
+        button {
+            margin-top: 0px;
+            margin-bottom: 0px;
+        }
+    }
+    .modal-default-button {
+        float: right;
+    }
+}
+
+.modal-enter {
+    opacity: 0;
+}
+
+.modal-leave-active {
+    opacity: 0;
+}
+
+.modal-enter .modal-container,
+.modal-leave-active .modal-container {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+}

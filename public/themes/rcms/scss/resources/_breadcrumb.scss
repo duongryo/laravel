@@ -1,0 +1,24 @@
+.row-breadcrumb {
+    //background-image: url(../img/bg-breadcrumb.png);
+    background-color: $bgWhite;
+    border-bottom: solid 1px $border;
+    border-top: solid 1px $border;
+    background-position: center left;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 111px;
+    padding: 10px 0px;
+
+    .breadcrumb {
+        background-color: transparent;
+        padding: 0px;
+        margin-bottom: 0px;
+    }
+    h3 {
+       margin-top: 10px;
+       margin-bottom: 5px; 
+    }
+    .breadcrumb-item + .breadcrumb-item::before {
+        content: "»";
+    }
+}

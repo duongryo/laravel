@@ -1,0 +1,103 @@
+======================================================================
+*** RCMS module ***
+*** Version 1.7 ***
+======================================================================
++ Requirements::
+======================================================================
+1/ Create Laravel Project With Auth UI
+
+2/ Run php artisan migrate to add role into user table
+
+3/ Run php artisan rcms:createadmin to create admin account
+
+4/ Add Middleware to kernel :
+    'services' => \RSolution\RCms\Http\Middleware\ServicesApi::class,
+    'rcms' => \RSolution\RCms\Http\Middleware\RCmsLogin::class,
+    'rcms.admin' => \RSolution\RCms\Http\Middleware\RCmsAdmin::class,
+    'rcms.user' => \RSolution\RCms\Http\Middleware\RCmsUser::class,
+    'locale' => \RSolution\RCms\Http\Middleware\Locale::class,
+5/ Run queue:
+    php artisan queue:work --queue=high,medium,default
+
+6/ Add Daily cron job
+    $schedule->command('rcms:daily')->daily();
+
+7/ Replace auth model in config/auth.php, AuthController/RegisterController.php with RSolution\RCms\Models\User::class
+
+8/ Instal Socialite Package if you want to use the Socialite function
+
+9/ Add shareasale component into header of layout template
+    @component('rcms::components.shareasale')@endcomponent
+
+
+======================================================================
++ Resource::
+======================================================================
+1/ Public Helpers:
+    "modules/r-cms/src/Helpers/helpers.php"
+
+2/ Event 
+    + UserActivationExpired
+    + UserActivationRenew
+    + UserActivationUpgrade
+    + TransactionCreated
+    + TransactionDestroyed
+    + ZohoSubscriptionEvent
+
+3/ Socialite Controller Auth\SocialAuthController
+
+======================================================================
+Change Logs:
+======================================================================
+#1.1
+    + Update Plan + Limit
+======================================================================
+#1.2
+    + Update themes RSolution
+    + Add helpers
+    + Update daily cron job and event for activation service 
+
+#1.3
+    + RCMS_THEME=rsolution
+    + RCMS_TELEGRAM_GROUP
+
+#1.4
+    + Update CRM function
+
+#1.5
+    + Update Mail welcome event
+
+#1.6 
+    + Update Avatar 
+    + Clean css code
+    + Update affiliate program
+    + Update multilanguage
+
+#1.6.1
+    + Add API controller
+    + Update Eloquent
+
+#1.6.2
+    + Update Mail Verification Notification Class
+    + Update rcms.user middleware to verify active user
+
+#1.6.3
+    + Update Socialite controller
+
+#1.6.4
+    + Update auto register with Google Account
+
+#1.6.5
+    + Update ZohoSubscriptionEvent
+    + Link with shareasale Function
+
+#1.7
+    + Update Stripe
+    + Fix duplicate verify mail and reset password email 
+
+#1.7.1
+    + Update Stripe ( migrate )
+    + Fix social auth trial activation
+
+#1.7.2
+    + Add Logout other devices when change pass (enable   \Illuminate\Session\Middleware\AuthenticateSession::class in kernel.php)

@@ -1,0 +1,15 @@
+.title{
+    margin: 20px 0;
+}
+.flex{
+    display: flex;
+}
+.b-action a{
+    margin: 0 10px;
+}
+.b-action-top{
+    margin-bottom: 10px;
+}
+.uploadfile{
+    margin: 10px 0;
+}

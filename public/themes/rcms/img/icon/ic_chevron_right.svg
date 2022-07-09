@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="20" height="24" viewBox="0 0 20 24">
+  <g id="ic_chevron_right" transform="translate(-433 -78)">
+    <rect id="rectangle" width="20" height="24" transform="translate(433 78)" fill="none"/>
+    <path id="path" d="M8.6,7.4,10,6l6,6-6,6L8.6,16.6,13.2,12Z" transform="translate(430.928 78)" fill-rule="evenodd" opacity="0.54"/>
+  </g>
+</svg>

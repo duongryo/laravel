@@ -1,0 +1,63 @@
+$fontWeightNormal: 400;
+$fontWeightMedium: 500;
+$fontWeightSemiBold: 600;
+$fontWeightBold: 700;
+$fontWeightBlack: 900;
+$fontWeightRegular: 300;
+
+$fontTitle: "Rosart Bold";
+$fontTitle2: "Source San Pro Bold";
+$fontContent: "CamphorPro Light";
+$fontContentBold: "CamphorPro Bold";
+
+$fontSizeTitle1: 76px;
+$fontSizeTitle2: 33px;
+$fontSizeTitle3: 23px;
+ 
+@font-face {
+    font-family: "Rosart Bold";
+    src: url("../font/rosart/ROSART-BOLD.TTF")
+        format("truetype");
+    font-weight: $fontWeightBlack;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: "CamphorPro Thin";
+    src: url("../font/camphorpro/CAMPHORPRO-THIN.OTF")
+        format("truetype");
+    font-weight: $fontWeightRegular;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: "CamphorPro Light";
+    src: url("../font/camphorpro/CAMPHORPRO-LIGHT.OTF")
+        format("truetype");
+    font-weight: $fontWeightRegular;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: "CamphorPro Regular";
+    src: url("../font/camphorpro/CAMPHORPRO-REGULAR.OTF")
+        format("truetype");
+    font-weight: $fontWeightRegular;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: "Source San Pro Bold";
+    src: url("../font/source-san-pro/SourceSansPro-Bold.ttf")
+        format("truetype");
+    font-weight: $fontWeightBlack;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: "CamphorPro Bold";
+    src: url("../font/camphorpro/CAMPHORPRO-BOLD.OTF")
+        format("truetype");
+    font-weight: $fontWeightBlack;
+    font-style: italic;
+}

@@ -1,0 +1,85 @@
+//$systemWhite: #ffffff;
+//$systemBlue: #007aff;
+//$systemGreen: #4cd964;
+//$systemRed: #ff3b30;
+//$systemOrange: #ff9500;
+//$systemSecondary: #e5eaef;
+//$systemLight: #e5f2fa;
+//$systemLightEnd: #fbfdff;
+//$systemDark: #262f3d;
+//$systemBorder: #e3e3e3;
+
+/* Opacity Color*/
+$blue10: #e5f1ff;
+$blue8: #ebf5ff;
+$blue5: #f2f8ff;
+$blue4: #f5faff;
+$blue2: #fafcff;
+$green5: #f6fdf7;
+$orange5: #fffaf2;
+$red5: #fff5f4;
+$dark5: #f4f4f5;
+$blue70: #4ca1fc;
+$green10: #edfbef;
+$green70: #81e492;
+$orange10: #fff4e5;
+$orange70: #ffb44c;
+$red70: #ff756d;
+$red10: #ffebea;
+$dark70: #666d76;
+$dark10: #e9e9eb;
+$dark5: #f4f4f5;
+
+/* Vesion 2.0 */
+$colorPrimary: #007aff;
+$colorPrimaryMedium: #99d8ff;
+$colorPrimaryLight: #cceeff;
+$colorDanger: #ff3b30;
+$colorDangerMedium: #ff9e82;
+$colorDangerLight: #ffe5d5;
+$colorWarning: #ff9500;
+$colorWarningMedium: #ffe199;
+$colorWarningLight: #fff2cc;
+$colorSuccess: #50da6d;
+$colorSuccessMedium: #c0fbbb;
+$colorSuccessLight: #e2fddd;
+$colorDisable: #e3e3e3;
+$colorWhite: #fff;
+$colorHover: #f5faff;
+/* Main */
+$mainPrimary: $colorPrimary;
+$mainDanger: $colorDanger;
+$mainWarning: $colorWarning;
+$mainSuccess: $colorSuccess;
+$mainDisable: $colorDisable;
+
+/* Border */
+$border: #cfcfcf;
+$borderLight: #eeebeb;
+
+/* Background */
+$bgLight: #f1f8ff;
+$bgDark: #262f3d;
+$bgWhite: #fff;
+$bgTable: #fafafa;
+$bgGradient: #e5f2fa;
+$bgGradientLight: #fbfdff;
+
+/* Text */
+$text: #262f3d;
+$textPrimary: $colorPrimary;
+$textSuccess: $colorSuccess;
+$textWarning: $colorWarning;
+$textDanger: $colorDanger;
+$textSecondary: #6c757d;
+
+/* Shadow  */
+$shadowColor: #000000;
+$shadowOpacity: 0.1;
+$shadow: 0px 3px 10px rgba($shadowColor, $shadowOpacity);
+
+/* Table */
+$tableHover: #fafcff;
+$tableEven: $bgTable;
+$tableHeader: $bgGradient;
+$tableRowBorder: #eeebeb;

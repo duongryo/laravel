@@ -1,0 +1,21 @@
+<svg id="Component_12_1" data-name="Component 12 – 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="28" height="28" viewBox="0 0 28 28">
+  <defs>
+    <filter id="Ellipse_80" x="5.5" y="6" width="17" height="17" filterUnits="userSpaceOnUse">
+      <feOffset dy="0.5" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="0.5" result="blur"/>
+      <feFlood flood-opacity="0.278"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="Group_791" data-name="Group 791" transform="translate(-189 -204.134)">
+    <g transform="matrix(1, 0, 0, 1, 189, 204.13)" filter="url(#Ellipse_80)">
+      <g id="Ellipse_80-2" data-name="Ellipse 80" transform="translate(7 7)" fill="#4cd964" stroke="rgba(0,0,0,0.1)" stroke-width="1">
+        <circle cx="7" cy="7" r="7" stroke="none"/>
+        <circle cx="7" cy="7" r="6.5" fill="none"/>
+      </g>
+    </g>
+    <path id="Path_733" data-name="Path 733" d="M-16.387,299.875l-2.461-2.494a.53.53,0,0,1,0-.75.53.53,0,0,1,.75,0l1.708,1.731,3.191-3.216a.53.53,0,0,1,.749-.029.53.53,0,0,1,.029.749l-.026.026Z" transform="translate(219 -78.848)" fill="#fff"/>
+  </g>
+  <rect id="Rectangle_1469" data-name="Rectangle 1469" width="28" height="28" fill="none"/>
+</svg>

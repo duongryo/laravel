@@ -1,0 +1,24 @@
+#mark-body {
+    color: transparent !important;
+}
+#mark-body a {
+    color: transparent !important;
+}
+
+.mce-content-body {
+    font-size: 17px;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+.mce-content-body::-webkit-scrollbar-track {
+    border-radius: 8px;
+    background-color: #f5f5f5;
+}
+.mce-content-body::-webkit-scrollbar {
+    width: 5px;
+    background-color: transparent;
+}
+.mce-content-body::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background-color: #c1c1c1;
+}

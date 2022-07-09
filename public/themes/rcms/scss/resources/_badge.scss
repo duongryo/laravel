@@ -1,0 +1,106 @@
+.badge {
+    font-size: 13px;
+    line-height: 26px;
+    padding: 0px 8px;
+    font-weight: $fontWeightMedium;
+    border-radius: 3px;
+    // display: inline-flex;
+    // margin: auto;
+    // align-items: center;
+    // justify-content: center;
+    text-align: center;
+    width: fit-content;
+
+    &.badge-primary {
+        background-color: $colorPrimaryLight;
+        color: $colorPrimary;
+    }
+    &.badge-success {
+        background-color: $colorSuccessLight;
+        color: $colorSuccess;
+    }
+    &.badge-warning {
+        background-color: $colorWarningLight;
+        color: $colorWarning;
+    }
+    &.badge-danger {
+        background-color: $colorDangerLight;
+        color: $colorDanger;
+    }
+    &.badge-disable {
+        background-color: $colorDisable;
+        color: $textSecondary;
+    }
+}
+
+a.badge,
+button.badge {
+    cursor: pointer;
+    &.badge-primary {
+        background-color: $colorPrimaryLight;
+        color: $colorPrimary;
+        &:hover {
+            background-color: $colorPrimaryMedium;
+        }
+    }
+    &.badge-success {
+        background-color: $colorSuccessLight;
+        color: $colorSuccess;
+        &:hover {
+            background-color: $colorSuccessMedium;
+        }
+    }
+    &.badge-warning {
+        background-color: $colorWarningLight;
+        color: $colorWarning;
+        &:hover {
+            background-color: $colorWarningMedium;
+        }
+    }
+    &.badge-danger {
+        background-color: $colorDangerLight;
+        color: $colorDanger;
+        &:hover {
+            background-color: $colorDangerMedium;
+        }
+    }
+    &.badge-disable {
+        background-color: $colorDisable;
+        color: $colorDisable;
+        &:hover {
+            background-color: $colorDisable;
+        }
+    }
+
+    &:focus {
+        box-shadow: unset !important;
+    }
+}
+
+.chip {
+    font-size: 13px;
+    line-height: 24px;
+    padding: 0 8px;
+    font-weight: $fontWeightMedium;
+    border-radius: 50px;
+    cursor: pointer;
+    display: inline-block;
+    height: 25px;
+    //
+    border-width: 1px;
+    border-style: solid;
+    color: $mainPrimary;
+    border-color: $mainPrimary;
+    background: $colorWhite;
+    &:hover {
+        background: $colorPrimaryLight;
+    }
+    &:focus {
+        background: $mainPrimary;
+        color: $colorWhite;
+    }
+    &.active {
+        background: $mainPrimary;
+        color: $colorWhite;
+    }
+}

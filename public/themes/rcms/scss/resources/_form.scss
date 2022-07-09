@@ -1,0 +1,130 @@
+/*form*/
+input {
+    padding-left: 15px !important;
+    padding-right: 15px !important;
+}
+.input-icons input {
+    padding: 5px 15px !important;
+}
+.form-group {
+    margin-bottom: 20px;
+    label {
+        font-weight: $fontWeightMedium;
+        margin-bottom: 10px;
+        display: block;
+    }
+    .sub-label {
+        margin-bottom: 10px;
+        //color: unset !important;
+        color: $textSecondary;
+        display: block;
+    }
+}
+.form-label {
+    font-size: 15px;
+    font-weight: $fontWeightMedium;
+    p {
+        margin-bottom: 0px;
+    }
+    .label-content {
+        font-size: 13px;
+        color: #a5a5a5;
+        margin-top: 5px;
+        font-weight: $fontWeightNormal;
+    }
+}
+.form-check {
+    display: flex;
+    align-items: center;
+    .form-check-input {
+        cursor: pointer;
+        margin-top: 1px;
+        margin-right: 2px;
+    }
+    .form-check-label {
+        margin-bottom: 0px;
+        margin-left: 5px;
+    }
+}
+
+.rsolution-checkbox {
+    &:disabled {
+        ~ ::before {
+            border: solid 2px $border;
+        }
+        ~ ::after {
+            border: solid 2px $border;
+            background-image: none;
+        }
+    }
+    &:before {
+        border: solid 2px $mainPrimary;
+        border-radius: 4px;
+        top: 0px;
+        width: 15px;
+        height: 15px;
+        left: -20px;
+    }
+    &:checked ~ ::before {
+        background: $mainPrimary;
+        border-color: $blue10;
+    }
+    &:focus ~ ::before {
+        box-shadow: none;
+    }
+}
+.rsolution-checkbox:after {
+    border: solid 2px $mainPrimary;
+    border-radius: 4px;
+    left: -20px;
+    top: 0px;
+    background-image: url(./../img/icon/icon-check-white.svg);
+    background-size: contain;
+    width: 15px;
+    height: 15px;
+}
+
+.form-control {
+    width: 100%;
+    display: block;
+    border-radius: 5px;
+    padding: 5px;
+    font-size: 13px;
+    line-height: 15px;
+    border: solid 1px $border;
+    height: 40px;
+    border-radius: 5px;
+    &:focus {
+        box-shadow: none;
+        border-color: $mainPrimary;
+    }
+    &.error {
+        border-color: $mainDanger;
+        background-image: url(./../img/icon/icon-error.svg);
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: right center;
+    }
+    &.success {
+        border-color: $mainSuccess;
+        background-image: url(./../img/icon/icon-success.svg);
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: right center;
+    }
+}
+
+.form-control-sm {
+    height: 30px;
+}
+
+.select-range-group {
+    .btn {
+        min-width: unset;
+        padding: 0 15px;
+    }
+}
+
+.sub-label {
+    color: $textSecondary;
+}

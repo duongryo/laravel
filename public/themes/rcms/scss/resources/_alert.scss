@@ -1,0 +1,78 @@
+$alertPrimary: $colorPrimaryMedium;
+$alertPrimaryHover: #64BAFA;
+
+$alertSuccess: $colorSuccessMedium;
+$alertSuccessHover: #97F399;
+
+$alertWarning: $colorWarningMedium;
+$alertWarningHover: #FFCC66;
+
+$alertDanger: $colorDangerMedium;
+$alertDangerHover: #FF9E82;
+
+.alert {
+    border-radius: 5px;
+    padding: 15px;
+    color: $text;
+    &.alert-primary {
+        background-color: $alertPrimary;
+
+        &:hover {
+            background-color: $alertPrimaryHover;
+        }
+    }
+    &.alert-success {
+        background-color: $alertSuccess;
+
+        &:hover {
+            background-color: $alertSuccessHover;
+        }
+    }
+    &.alert-warning {
+        background-color: $alertWarning;
+
+        &:hover {
+            background-color: $alertWarningHover;
+        }
+    }
+    &.alert-danger {
+        background-color: $alertDanger;
+
+        &:hover {
+            background-color: $alertDangerHover;
+        }
+    }
+    &.alert-sm {
+        padding: 7px;
+    }
+}
+.toast-container > .toast-success {
+    background-image: unset !important;
+}
+.toast {
+    border-radius: 5px !important;
+    opacity: 1 !important;
+    box-shadow: unset !important;
+    font-size: 13px;
+
+    &.toast-primary {
+        background-color: $colorPrimaryMedium;
+        color: $text;
+    }
+    &.toast-info {
+        background-color: $colorPrimaryMedium;
+        color: $text;
+    }
+    &.toast-success {
+        background-color: $colorSuccessMedium;
+        color: $text;
+    }
+    &.toast-warning {
+        background-color: $colorWarningMedium;
+        color: $text;
+    }
+    &.toast-danger {
+        background-color: $colorDangerMedium;
+        color: $text;
+    }
+}

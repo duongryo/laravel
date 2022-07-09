@@ -1,0 +1,196 @@
+/*table*/
+
+.table-radius {
+    border: solid 1px $tableRowBorder;
+    border-radius: 5px;
+}
+
+.rsolution-table {
+    margin-bottom: 0px;
+    .id {
+        width: 45px;
+    }
+    thead {
+        text-transform: uppercase;
+        tr {
+            th {
+                vertical-align: middle !important;
+                border-top: 0px;
+                border-bottom: 0px;
+                background-color: $tableHeader;
+                padding: 14px 12px !important;
+                font-weight: $fontWeightMedium;
+                &:first-child {
+                    //border-top-left-radius: 5px;
+                }
+                &:last-child {
+                    //border-top-right-radius: 5px;
+                }
+            }
+        }
+    }
+
+    tbody {
+        font-weight: $fontWeightMedium !important;
+        display: block;
+        tr {
+            border-bottom: 1px solid $tableRowBorder;
+            &.selected {
+                background: $bgLight;
+            }
+            td {
+                vertical-align: middle !important;
+                padding: 12px 12px !important;
+                border-top: 0px;
+            }
+            &:hover {
+                background: $tableHover;
+            }
+            &:nth-child(odd) {
+                //background: red;
+            }
+            &:nth-child(even) {
+                //background: $tableEven;
+            }
+            &:last-child {
+                border-bottom: 0px;
+            }
+            &.child-row {
+                background-color: $bgLight !important;
+            }
+        }
+    }
+    tr {
+        display: table;
+        width: 100%;
+        table-layout: fixed;
+    }
+
+    //
+    &.grid {
+        border: 1px solid $tableRowBorder;
+        th,
+        td {
+            border-right: 1px solid $tableRowBorder;
+        }
+
+        th.id,
+        td.id,
+        th:last-child,
+        td:last-child {
+            border-right-width: 0px;
+        }
+        //
+        tbody {
+            tr {
+                &:nth-child(odd) {
+                    //background: red;
+                }
+                &:nth-child(even) {
+                    background: $tableEven;
+                }
+            }
+        }
+    }
+    &.striped {
+        tbody {
+            tr {
+                &:nth-child(odd) {
+                    //background: red;
+                }
+                &:nth-child(even) {
+                    background: $tableEven;
+                }
+            }
+        }
+    }
+    &.border {
+        border-color: $tableRowBorder !important;
+    }
+}
+
+.checkbox-rsolution {
+    position: relative;
+    input {
+        position: absolute;
+        cursor: pointer;
+        left: 0px;
+        z-index: 1;
+        width: 15px;
+        height: 15px;
+        opacity: 0;
+        &:checked ~ label:before {
+            background-color: #007aff;
+            border-color: #007aff;
+            border-radius: 4px;
+        }
+        &:checked ~ label:after {
+            background-image: url("./../img/icon/icon-check-white.svg");
+        }
+    }
+
+    label {
+        &:after {
+            position: absolute;
+            top: 0;
+            left: 0;
+            display: block;
+            width: 15px;
+            height: 15px;
+            content: "";
+            background: no-repeat 50%/50% 50%;
+        }
+        &::before {
+            position: absolute;
+            top: 0;
+            left: 0px;
+            display: block;
+            width: 15px;
+            height: 15px;
+            pointer-events: none;
+            content: "";
+            background-color: #fff;
+            border: #707070 solid 2px;
+            border-radius: 4px;
+        }
+    }
+}
+
+.card-table {
+    border-collapse: separate !important;
+    border-spacing: 0px 5px;
+    thead {
+        th {
+            background: transparent;
+            border: none;
+            opacity: 60%;
+            font-size: 12px;
+            text-transform: uppercase;
+            font-weight: 600;
+            color: #333;
+        }
+    }
+    tbody {
+        tr {
+            border: solid 1px $border;
+            margin-bottom: 15px;
+            background-color: #fff;
+            td {
+                border-top: solid 1px $border;
+                border-bottom: solid 1px $border;
+                padding-top: 25px;
+                padding-bottom: 25px;
+                &:first-child {
+                    border-left: solid 1px $border;
+                    border-top-left-radius: 5px;
+                    border-bottom-left-radius: 5px;
+                }
+                &:last-child {
+                    border-right: solid 1px $border;
+                    border-top-right-radius: 5px;
+                    border-bottom-right-radius: 5px;
+                }
+            }
+        }
+    }
+}

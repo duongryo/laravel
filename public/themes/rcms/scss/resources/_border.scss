@@ -1,0 +1,55 @@
+.rsolution-border {
+    border: solid 1px $border;
+}
+.border {
+    border: 1px solid $border !important;
+}
+.border-left {
+    border-left: solid 1px $border !important;
+}
+
+.border-right {
+    border-right: solid 1px $border !important;
+}
+
+.border-top {
+    border-top: solid 1px $border !important;
+}
+
+.border-bottom {
+    border-bottom: solid 1px $border !important;
+}
+
+.hover-border:hover {
+    border-color: #007aff !important;
+}
+
+.border-dashed-top {
+    border-top: 1px dashed $border !important;
+}
+
+.border-dashed-bottom {
+    border-bottom: 1px dashed $border !important;
+}
+
+.border-dashed-right {
+    border-right: 1px dashed $border !important;
+}
+
+.border-dashed-left {
+    border-left: 1px dashed $border !important;
+}
+
+.rsolution-border-line {
+    border-top: 1px solid $border;
+    margin: 10px 0px;
+    &-dashed {
+        border-top: 1px dashed $border;
+        margin: 10px 0px;
+    }
+    &-primary {
+        border-top: 2px solid $colorPrimary;
+        margin: 10px 0px;
+        width: 50px;
+    }
+}

@@ -1,0 +1,57 @@
+======================================================================
+*** RTECH module ***
+*** Version 1.0 ***
+======================================================================
++ Requirements::
+======================================================================
+
+1/ Run php artisan migrate to add
++ post
++ post_category
+
+2/ Package: 
++ Install File manager
+ ++ composer require unisharp/laravel-filemanager
+ ++ php artisan vendor:publish --tag=lfm_config ( edit file lfm.php : 'rename_file' => true, 'alphanumeric_filename'    => true )
+ ++ php artisan vendor:publish --tag=lfm_public
+ ++ php artisan storage:link
+ ++ Add service providers: 
+    +++ UniSharp\LaravelFilemanager\LaravelFilemanagerServiceProvider::class, Intervention\Image\ImageServiceProvider::class,
+ ++ And add class aliases:
+    +++ 'Image' => Intervention\Image\Facades\Image::class,
+ ++ php artisan vendor:publish --tag=lfm_config && php artisan vendor:publish --tag=lfm_public
+ ++ Edit APP_URL in .env => link domain
+
+3/ Add service providers
++ RTech\Providers\RTechServiceProvider::class,
+
+4/ Add: Cấu hình > Sidebar
++ Blog
+    ++ Tên: Blog
+    ++ Url: post
+    ++ Icon: default
+    ++ Hiển thị: Admin + Manager
+
++ Blog Categories
+    ++ Tên: Blog Categories
+    ++ Url: category
+    ++ Icon: default
+    ++ Hiển thị: Admin + Manager
+
++ Systems Config
+    ++ Tên: Systems Config
+    ++ Url: system-config
+    ++ Icon: default
+    ++ Hiển thị: Admin + Manager
+
++ Team Members
+    ++ Tên: Team Members
+    ++ Url: team-members
+    ++ Icon: default
+    ++ Hiển thị: Admin + Manager
+
++ Our Products
+    ++ Tên: Our Products
+    ++ Url: product
+    ++ Icon: default
+    ++ Hiển thị: Admin + Manager
