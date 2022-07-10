@@ -12,58 +12,49 @@ $theme = config('rcms-core.theme')
     <meta name="csrf-token" content="{{csrf_token()}}">
     <title>RSolution | Dashboard &amp; Optimization</title>
     <meta name="theme-color" content="#ffffff">
-    <!-- CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-    <!-- Themes -->
     <link rel="stylesheet" href="/themes/{{$theme}}/css/bootstrap.min.css">
-    <link rel="stylesheet" href="/themes/{{$theme}}/css/themes.css">
-    <!-- Lib -->
-    <link rel="stylesheet" href="/themes/{{ $theme }}/lib/fontawesome/css/all.min.css">
-    <!-- CDN -->
-    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-confirm/3.3.2/jquery-confirm.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap4-tagsinput@4.1.3/tagsinput.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+    <link rel="stylesheet" href="/themes/{{$theme}}/plugins/fontawesome-free/css/all.min.css">
+    <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+    <link rel="stylesheet" href="/themes/{{$theme}}/plugins/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css">
+    <link rel="stylesheet" href="/themes/{{$theme}}/plugins/icheck-bootstrap/icheck-bootstrap.min.css">
+    <link rel="stylesheet" href="/themes/{{$theme}}/plugins/jqvmap/jqvmap.min.css">
+    <link rel="stylesheet" href="/themes/{{$theme}}/dist/css/adminlte.min.css">
+    <link rel="stylesheet" href="/themes/{{$theme}}/plugins/overlayScrollbars/css/OverlayScrollbars.min.css">
+    <link rel="stylesheet" href="/themes/{{$theme}}/plugins/daterangepicker/daterangepicker.css">
+    <link rel="stylesheet" href="/themes/{{$theme}}/plugins/summernote/summernote-bs4.min.css">
     @include('rcms::custom.css')
 </head>
 
-<body class="bg-light">
-    <!-- ===============================================-->
-    <!--    Main Content-->
-    <!-- ===============================================-->
-    <main class="main wrapper">
-        <div class="container-fluid p-0">
-            <!-- SideBar -->
-            @include('rcms::layout.sidebar')
-            <!-- End SideBar -->
-            <div class="main-content">
-                <!-- TopBar -->
-                @include('rcms::layout.topbar')
-                <!-- End TopBar -->
-
-                <!-- Content -->
-                <div class="page-result">
+<body class="hold-transition sidebar-mini layout-fixed">
+    <div class="wrapper">
+        @include('rcms::layout.reloader')
+        @include('rcms::layout.navbar')
+        @include('rcms::layout.sidebar')
+        <div class="content-wrapper">
+            <div class="content-header">
+                <div class="container-fluid">
                     @yield('content')
                 </div>
-                <!-- End content -->
             </div>
         </div>
-    </main>
-    <!-- ===============================================-->
-    <!--    End of Main Content-->
-    <!-- ===============================================-->
+        @include('rcms::layout.footer')
+    </div>
+    <script src="/themes/{{$theme}}/plugins/jquery/jquery.min.js"></script>
+    <script src="/themes/{{$theme}}/plugins/jquery-ui/jquery-ui.min.js"></script>
 
-    <!-- ===============================================-->
-    <!--    JavaScripts-->
-    <script src="/themes/{{$theme}}/js/jquery-3.4.1.min.js"></script>
-    <script src="/themes/{{$theme}}/js/popper.min.js"></script>
     <script src="/themes/{{$theme}}/lib/bootstrap/js/bootstrap.min.js"></script>
+    <script src="/themes/{{$theme}}/js/popper.min.js"></script>
     <script src="/themes/{{$theme}}/js/flatpickr.js"></script>
-    <!-- CDN -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-confirm/3.3.2/jquery-confirm.min.js"></script>
-    <script src="https://cdn.tiny.cloud/1/8ge397vch4740f15cfn8pnzp8j3lukt68asgl99jtg2uo4xd/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
-    <!-- Toast -->
+    <script src="/themes/{{$theme}}/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="/themes/{{$theme}}/plugins/moment/moment.min.js"></script>
+    <script src="/themes/{{$theme}}/plugins/daterangepicker/daterangepicker.js"></script>
+    <script src="/themes/{{$theme}}/plugins/tempusdominus-bootstrap-4/js/tempusdominus-bootstrap-4.min.js"></script>
+    <script src="/themes/{{$theme}}/plugins/summernote/summernote-bs4.min.js"></script>
+    <script src="/themes/{{$theme}}/plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
+    <script src="/themes/{{$theme}}/dist/js/adminlte.js"></script>
+    <script src="/themes/{{$theme}}/dist/js/demo.js"></script>
+    <script src="/themes/{{$theme}}/dist/js/pages/dashboard.js"></script>
     @component('rcms::components.notification') @endcomponent
     @include('rcms::custom.js')
     @yield('js')
